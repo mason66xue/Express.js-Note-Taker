@@ -4,6 +4,9 @@ const path=require('path');
 
 // init express 
 const app =express();
+app.get('api/notes',(req, res)=>{
+    res.json(notes)
+})
 
 //set a static folder 
 app.use(express.static(path.join(__dirname, 'public')));
