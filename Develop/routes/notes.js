@@ -42,17 +42,16 @@ tips.delete('/:db.json', (req, res) => {
 });
 
 // POST Route for a new UX/UI tip
-tips.post('/', (req, res) => {
+notes.post('/', (req, res) => {
   console.log(req.body);
 
-  const { username, topic, tip } = req.body;
+  const { noteTitle, noteText } = req.body;
 
   if (req.body) {
-    const newTip = {
-      username,
-      tip,
-      topic,
-      tip_id: uuidv4(),
+    const newNote = {
+      noteTitle,
+      noteText,
+      id: uuidv4(),
     };
 
     readAndAppend(newTip, './db/tips.json');
