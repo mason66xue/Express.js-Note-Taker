@@ -20,20 +20,20 @@ app.use(express.static('public'));
 // GET Route for homepage
 // localhost:3001/
 app.get('/', (req, res) =>
-  res.sendFile(path.join(__dirname, '/develop/public/static/index.html'))
+  res.sendFile(path.join(__dirname, './public/index.html'))
 );
 
 // GET Route for notes page
 // localhost:3001/notes
 app.get('/notes', (req, res) =>
-  res.sendFile(path.join(__dirname, '/develop/public/notes.html'))
+  res.sendFile(path.join(__dirname, './public/notes.html'))
 );
 
 // Wildcard route to direct users to home
 // localhost:3001/anything else
-app.get('*', (req, res) =>
-  res.sendFile(path.join(__dirname, '/develop/public/index.html'))
-);
+// app.get('*', (req, res) =>
+//   res.sendFile(path.join(__dirname, '/develop/public/index.html'))
+// );
 
 
 //set up listner

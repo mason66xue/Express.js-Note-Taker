@@ -6,7 +6,8 @@ const diagnosticsRouter=require('./diagnostic');
 
 const app = express();
 
-app.use('./notes',notesRouter);
+// https://localhost:3001/api/notes
+app.use('/notes',notesRouter);
 app.use('./diagnostics', diagnosticsRouter);
 
 module.exports=app; 
